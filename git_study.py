@@ -1,1 +1,0 @@
-print("멋시 git study 230407")
