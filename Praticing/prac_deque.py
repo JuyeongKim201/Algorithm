@@ -1,6 +1,6 @@
 from collections import deque
 
-dq = deque([1,2,3,4,5,6])
+dq = deque([0,0,0,0,0])
 print(dq)
 
 
@@ -20,10 +20,16 @@ def queOut():
     dq.popleft()
     print("queOut -> ", dq)
 
+for i in range(1, 6):
+    stackIn(i)
 
-stackIn(999)
-stackOut()
+for i in range(1, 6):
+    stackOut()
 
-queIn(999)
-queOut()
+print('-----------')
 
+for i in range(1, 6):
+    queIn(i)
+
+for i in range(1, 6):
+    queOut()
