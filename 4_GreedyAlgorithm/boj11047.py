@@ -22,12 +22,3 @@ while K > 0:
 print(cnt)
 
 
-
-
-
-
-
-
-
-
-

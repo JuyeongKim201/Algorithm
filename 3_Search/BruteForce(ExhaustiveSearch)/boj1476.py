@@ -27,8 +27,3 @@ while True:
 print(year)
 
 
-
-
-
-
-
