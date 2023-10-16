@@ -28,8 +28,6 @@ for _ in range(T):
         if i > n: # n보다 큰 소수는 검사 x
             break
 
-        sample = n-i
-
         for j in primeNumbers:
             if j > i: # 파티션 중복 카운트 방지
                 escape = True # 탈출
