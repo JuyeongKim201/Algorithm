@@ -7,5 +7,5 @@ for i in range(9):
     numList.append(num)
 
 print(max(numList))
-print(numList.index(max(numList))+1)
+print(numList.index(max(numList))+1) # 같은 값이 중복될 떄는? -> 아마 맨 앞 데이터?? 
 
