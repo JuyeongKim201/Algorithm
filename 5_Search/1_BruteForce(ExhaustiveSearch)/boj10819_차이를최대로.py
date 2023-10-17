@@ -22,8 +22,6 @@ used = [False for i in range(N)]
 if len(plus) > 0 and len(minus) == 0:
     for i in range(N):
         
-
-
 # only 음수일 때
 elif len(plus) == 0 and len(minus) > 0:
     print(1)

@@ -31,9 +31,9 @@ n = int(input())
 words = []
 
 for _ in range(n):
-    words.append(input())
+    words.append(input().rstrip('\n'))
 
-words.list(set(words)) # 중복 삭제
+words = list(set(words)) # 중복 삭제
 words.sort(key = lambda x: (len(x), x)) # 정렬
 
 for word in words:
