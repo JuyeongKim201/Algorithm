@@ -23,7 +23,18 @@
 import sys
 input = sys.stdin.readline
 
-A, B, C = input().split()
+A, B, C = map(int, input().split())
 
+def remain(A, n):
+    if n == 1:
+        return A%C
+    else:
+        part = remain(A, n//2)
+        if n % 2 ==0:
+            return (part * part) % C
+        else:
+            return (part  * part * A) % C
+          
+print(remain(A, B))
 
 
