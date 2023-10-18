@@ -16,19 +16,19 @@
 
 # 원판은 start 자리(2번째 인자) -> target 자리(4번째 인자)로 감. 인자 위치 변화에 따른 헷갈림에 주의
 # 원판 이동 행위는 print()로 구현
-def hanoi(n, start, sub, target, count):
+def hanoi(n, start, sub, target):
     # base case
     if n == 1:
         print(start, target)
-        return count
+        return 
     # general case
     else:
         # 1. 위의 n-1개의 원판 그룹을 [시작 -> 보조] 기둥 이동
-        hanoi(n-1, start, target, sub, count+1) # 보조 기둥이 타겟이 됨.
+        hanoi(n-1, start, target, sub) # 보조 기둥이 타겟이 됨.
         # 2. 아래 가장 큰 원판(n+1번째 원판)을 직접 [시작 -> 타겟] 기둥 이동
         print(start, target)
         # 3. 1번에서 옮긴 n-1개의 원판 그룹을 [보조 -> 타겟] 기둥 이동
-        hanoi(n-1, sub, start, target, count+1)
+        hanoi(n-1, sub, start, target)
 
 
 

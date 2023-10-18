@@ -2,10 +2,12 @@
 # 포인터 구현 
 
 '''
-더 효율적인 ver. 교과서에서 소개된 코드임.
+더 효율적인 ver. 
 앞선 코드 대비 장점은 인플레이스(in-place)로 분할을 수행한다는 점.
 즉, 추가적인 메모리를 사용하지 않고 입력 리스트 내에서만 작업을 수행함. 
 첫번째 코드와 달리 리스트를 새로 만드는 메모리가 소요되지 않음. 
+
+즉, 공간 복잡도 측면에서 우위에 있음.
 '''
 
 nums = []
@@ -31,13 +33,14 @@ def quick_sort(nums, left, right):
             nums[pl], nums[pr] = nums[pr], nums[pl] # 양쪽 값의 위치를 교환
             pl, pr = pl+1, pr-1
 
+    # 분할된 왼쪽, 오른쪽 부분에 대해서 재귀적으로 퀵 정렬
     if left < pr:
         quick_sort(nums, left, pr)
     if pl < right:
         quick_sort(nums, pl, right)
 
 
-nums = quick_sort(nums)
+quick_sort(nums, 0, len(nums)-1)
 for num in nums:
     print(num)
 
