@@ -74,7 +74,8 @@ while True: # 입력이 끝날 때까지 받기
 
 BST = {}
 make_BST(output)
-print(BST)
-# postorder(output[0]) # 전위 순회의 출력값에선 0번째 index가 root 노드
+
+### 출력 부분 ###
+postorder(output[0]) # 전위 순회의 출력값에선 0번째 index가 root 노드
 
 
