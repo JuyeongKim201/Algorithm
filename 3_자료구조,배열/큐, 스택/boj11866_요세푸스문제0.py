@@ -46,7 +46,3 @@ for i in range(len(out)):
         prt += f'{out[i]}, '
 
 print(prt)
-
-
-
-
