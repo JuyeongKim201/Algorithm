@@ -9,7 +9,8 @@ for 모든 정점:
         dfs -> 탐색되는 모든 노드 집합에 넣기
 
 --------------------
-방문 여부를 list.append() 가 아니라 TRUE/FALSE로 하면 속도가 빨라짐
+1. 방문 여부를 list.append() 가 아니라 TRUE/FALSE로 하면 속도가 빨라짐
+2. dfs 정의할 때 방문 여부를 for문 안으로 넣는게 실행속도가 훨씬 빠름. 
 
 '''
 import sys
