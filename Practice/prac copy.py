@@ -1,4 +1,12 @@
-from itertools import *
-a = {1:[1,2], 2:[5,6], 3:[9,9]}
-for i in permutations(a, 2):
-    print(i)
+nums = [1,2,3,0,0,1]
+
+for i in nums:
+    if i:
+        print(f'{i}는 0이 아니다')
+    elif not i:
+        print(f'{i}는 0 입니다~!')
+
+'''
+0이거나, 배열이나 큐, 스택이 비면 False를 반환한다. 
+
+'''
