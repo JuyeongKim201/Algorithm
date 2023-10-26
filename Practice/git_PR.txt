@@ -1,0 +1,84 @@
+juyeongkim@JuyeongKimui-MacBookAir KJ3-101-W01-03 % git pull
+juyeongkim@JuyeongKimui-MacBookAir KJ3-101-W01-03 % git switch Week02/김주영 
+juyeongkim@JuyeongKimui-MacBookAir KJ3-101-W01-03 % git add .
+juyeongkim@JuyeongKimui-MacBookAir KJ3-101-W01-03 % git commit -m "2주차 김주영(30) 시험"
+juyeongkim@JuyeongKimui-MacBookAir KJ3-101-W01-03 % git push 
+
+
+
+
+
+------------------------------------------------------------------------------------------
+juyeongkim@JuyeongKimui-MacBookAir KJ3-101-W01-03 % git pull
+remote: Enumerating objects: 425, done.
+remote: Counting objects: 100% (208/208), done.
+remote: Compressing objects: 100% (155/155), done.
+remote: Total 425 (delta 93), reused 120 (delta 47), pack-reused 217
+Receiving objects: 100% (425/425), 88.98 KiB | 7.42 MiB/s, done.
+Resolving deltas: 100% (144/144), completed with 7 local objects.
+From https://github.com/krafton-jungle/KJ3-101-W01-03
+ * [new branch]      Week01/angie412          -> origin/Week01/angie412
+ * [new branch]      Week01/kim-jingyu        -> origin/Week01/kim-jingyu
+   9ff61e9..1df1e4e  Week01/orcasuit          -> origin/Week01/orcasuit
+ * [new branch]      Week01/김민규         -> origin/Week01/김민규
+ * [new branch]      Week01/김주영         -> origin/Week01/김주영
+ * [new branch]      Week01/이세욱         -> origin/Week01/이세욱
+ * [new branch]      Week02/1stApplePie       -> origin/Week02/1stApplePie
+ * [new branch]      Week02/Kyumin98          -> origin/Week02/Kyumin98
+ * [new branch]      Week02/WantKakao         -> origin/Week02/WantKakao
+ * [new branch]      Week02/amazingspidy      -> origin/Week02/amazingspidy
+ * [new branch]      Week02/hnjog             -> origin/Week02/hnjog
+ * [new branch]      Week02/kim-jingyu        -> origin/Week02/kim-jingyu
+ * [new branch]      Week02/김주영         -> origin/Week02/김주영
+ * [new branch]      Week02/이세욱         -> origin/Week02/이세욱
+   65a8677..affb856  master                   -> origin/master
+ * [new branch]      revert-6-week1/Horsecano -> origin/revert-6-week1/Horsecano
+ * [new branch]      week01/amazingspidy      -> origin/week01/amazingspidy
+ * [new branch]      week01/electronyoon      -> origin/week01/electronyoon
+ * [new branch]      week01/flowne            -> origin/week01/flowne
+ * [new branch]      week01/kim-jingyu        -> origin/week01/kim-jingyu
+ * [new branch]      week01/kim5606           -> origin/week01/kim5606
+ * [new branch]      week01/metamong-Hi       -> origin/week01/metamong-Hi
+   a9de86e..a5b8fc9  week01/sylee6529         -> origin/week01/sylee6529
+ * [new branch]      week02/kim5606           -> origin/week02/kim5606
+ * [new branch]      week02/minsanggi         -> origin/week02/minsanggi
+ * [new branch]      week02/sleeeeeepy        -> origin/week02/sleeeeeepy
+ * [new branch]      week02/y0c0y             -> origin/week02/y0c0y
+ * [new branch]      week02/김병현         -> origin/week02/김병현
+ * [new branch]      week1/Horsecano          -> origin/week1/Horsecano
+ * [new branch]      week2/songarden          -> origin/week2/songarden
+ * [new branch]      week2/마찬옥          -> origin/week2/마찬옥
+Already up to date.
+
+juyeongkim@JuyeongKimui-MacBookAir KJ3-101-W01-03 % git switch Week02/김주영 
+M       Week01/Vacayy/1110.py
+D       Week02/sample_user/hello.py
+branch 'Week02/김주영' set up to track 'origin/Week02/김주영'.
+Switched to a new branch 'Week02/김주영'
+juyeongkim@JuyeongKimui-MacBookAir KJ3-101-W01-03 % git branch
+  Week01/Vacayy
+  Week01/김주영
+* Week02/김주영
+  backup-branch
+  master
+  new-branch
+juyeongkim@JuyeongKimui-MacBookAir KJ3-101-W01-03 % git add .
+juyeongkim@JuyeongKimui-MacBookAir KJ3-101-W01-03 % git commit -m "2주차 김주영(30) 시험"
+[Week02/김주영 f767394] 2주차 김주영(30) 시험
+ 6 files changed, 182 insertions(+), 2 deletions(-)
+ create mode 100644 Week01/.DS_Store
+ create mode 100644 "Week02/Vacayy(\352\271\200\354\243\274\354\230\201)/1388.py"
+ create mode 100644 "Week02/Vacayy(\352\271\200\354\243\274\354\230\201)/18405.py"
+ create mode 100644 "Week02/Vacayy(\352\271\200\354\243\274\354\230\201)/2667.py"
+ delete mode 100644 Week02/sample_user/hello.py
+juyeongkim@JuyeongKimui-MacBookAir KJ3-101-W01-03 % git push 
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 2.99 KiB | 2.99 MiB/s, done.
+Total 11 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/krafton-jungle/KJ3-101-W01-03.git
+   d5b3337..f767394  Week02/김주영 -> Week02/김주영
+juyeongkim@JuyeongKimui-MacBookAir KJ3-101-W01-03 % 

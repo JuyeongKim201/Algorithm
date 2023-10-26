@@ -39,4 +39,20 @@ heapq 모듈은 리스트의 첫 번째 요소(인덱스 0)가 항상 힙의 최
 나머지 요소들은 힙 속성을 유지하도록 재정렬됩니다.
 '''
 
+import heapq
 
+# 우선순위 큐를 빈 배열로 초기화
+priority_queue = []
+
+# 삽입 연산: 우선순위와 항목을 튜플로 묶어서 삽입
+heapq.heappush(priority_queue, ('우선순위', '넣을 항목')) # 이때, 낮은 숫자가 높은 우선순위를 나타낸다
+
+# 삭제 연산: 최소 우선순위 항목을 삭제하고 반환
+priority, item = heapq.heappop(priority_queue)
+
+# 최소 우선순위 항목 조회: 리스트의 첫 번째 항목이 최소 우선순위 항목
+priority, item = priority_queue[0]
+
+# 우선순위 큐의 모든 항목을 정렬된 순서로 반환
+# heapq.nsmallest() 함수를 사용하면 우선순위 큐의 모든 항목을 정렬된 순서로 반환할 수 있다.
+sorted_items = [item for priority, item in heapq.nsmallest(len(priority_queue), priority_queue)]
