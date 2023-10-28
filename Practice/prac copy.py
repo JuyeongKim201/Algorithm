@@ -1,1 +1,4 @@
-print(0//1)
+N = int(input())
+coins = list(map(int, input().split()))
+    
+print(coins)
