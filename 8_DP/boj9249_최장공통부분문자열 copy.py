@@ -38,8 +38,9 @@ def lcs(str1, str2):
             else:
                 dp[i, j] = 0
 
-            if i > 2 and j > 2:
-                del dp[i-2, j-2]
+            if i > 2: 
+                for j in range(1, len(str2) + 1):
+                    del dp[i-2, j]
 
 
     # return lcs_value, lcs_string
