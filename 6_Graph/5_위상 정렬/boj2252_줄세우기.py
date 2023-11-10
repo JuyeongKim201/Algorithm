@@ -48,10 +48,3 @@ result = topological_sort(graph)
 for i in result:
     print(i, end=' ')
 
-
-
-
-
-
-
-

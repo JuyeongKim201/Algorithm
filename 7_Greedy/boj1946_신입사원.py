@@ -1,57 +1,52 @@
 # 문제: 신입사원 (실버 1)
 '''
-서류심사, 면접시험 둘 다 다른 참가자 대비 딸리는 애는 안 뽑는다. 
-만약 1 1 인 애가 뽑힌다면 한 명밖에 못 뽑음 
+[문제 이해]
+
+처음에는 헷갈림.. 합격자 a를 랜덤하게 골랐을 때 어떤 다른 합격자와 비교해도 하나는 등수가 높아야 한다는 걸로.. 
+(합격자와 지원자를 헷갈리면 안됨..)
+
+특정 지원자가 다른 모든 지원자보다 둘 다 높은 성적을 가지고 있으면 그 지원자만이 선발될 수 있음. 
+서로 다른 두 지원자가 각각 하나의 성적에서 높은 성적을 가지고 있으면 두 지원자 모두 선발될 수 있음. 
 ---------------------
-엇갈릴수록 좋음
+[조건 충족 여부]
+최대 인원수를 구해라 => 해당 조건 만족하는 애들 전부 다 뽑아라 (뽑다 말지 말고)
+
+지원자 선발 원칙에 따르면, 
+아래 코드 기준에 따라 뽑은 합격자 집합 외에는 합격자가 나올 수가 없음. --> 유일성을 보장. 그리고 이건 등수가 중복되지 않기 때문에 가능.
+즉, 최대 인원수를 구하라는 거는 합격자 집합의 부분 집합을 구하지 말고 (중간에 멈추지 말고) 끝까지 구하라는 소리와 같음. 
+
 ---------------------
-1. 등수 차이가 큰 순서 -> 작은 순서로 정렬 
-2. 서류심사 or 면접시험 점수 중 하나를 두번째 기준으로 써서 정렬 
-3. 둘 중 더 많이 뽑을 수 있는 거 기준으로 선발
+[풀이 아이디어]
+
+1. 서류 or 면접 중 하나를 기준 삼아서 정렬. (이번에는 서류 기준으로 정렬한다고 가정)
+2. 서류 1등은 무조건 기준 만족
+3. 서류 2등부터는 면접 등수를 체크해야 함: 
+    - 서류 등수는 점차 낮아지므로 마주치는 각 지원자는 면접 등수가 지금까지 등장한 지원자 중에 최고 등수여야 뽑음
 
 '''
 import sys
 input = sys.stdin.readline
 
 
-T = int(input())
+T = int(input())  
 for _ in range(T):
-    mens = []
-    N = int(input())
-    for i in range(N):
-        resume, interview = list(map(int, input().split()))
-        mens.append([resume, interview, interview-resume])
+    N = int(input())  
+    applicants = [list(map(int, input().split())) for _ in range(N)]  
 
-    # mens.sort(key = lambda x: (-abs(x[2]), -x[1])) # 등수 차이를 1, 서류 등수를 2번째 기준으로 내림차순 정렬    
-    # interview_cutline = 100001
+    # 서류 등수 기준으로 정렬 
+    applicants.sort(key=lambda x: x[0])
 
-    # cnt = 0 # 합격자 수
-    # passmen = []
+    # 첫 번째 지원자는 무조건 선발
+    count = 1
+    interview_rank = applicants[0][1]
 
-    # print(mens)
+    for i in range(1, N):
+        # 현재 지원자의 면접 성적이 이전에 선발된 지원자의 면접 성적보다 좋거나 같은 경우
+        if applicants[i][1] < interview_rank:
+            count += 1
+            interview_rank = applicants[i][1]  # 면접 등수 업데이트
 
-    # for i in mens:
-    #     if i[1] < interview_cutline: 
-    #         cnt += 1
-    #         passmen.append(i)                        
-    #         interview_cutline = i[1]
-    
-    # print(_, "회차 합격: ", passmen, cnt)
-    
-    mens.sort(key = lambda x: (-abs(x[2]), -x[2])) # 등수 차이를 1, 면접 등수를 2번째 기준으로 내림차순 정렬
-    resume_cutline = 100001
-    
-    cnt = 0 # 합격자 수
-    passmen = []
-
-    print(mens)
-
-    for i in mens:
-        if i[1] < resume_cutline: 
-            cnt += 1
-            passmen.append(i)                        
-            resume_cutline = i[1]
-    print(_, "회차 합격: ", passmen, cnt)
+    print(count)
 
     
             

@@ -13,6 +13,12 @@ LCS 문제와 거의 동일. 차이점은
 
 ----
 거의 다 왔는데 딕셔너리 삭제 논리가 완벽하지 않음. 완성 필요        
+
+1. count 방식으로
+    - dict, list를 쓰는 순간 str1이 19만 글자라든지 하는 예외케이스에서 메모리 초과
+2. LCS 길이, LCS 마지막 or 첫번째 문자 인덱스 번호만 알면 문자열은 뽑아낼 수 있음. 
+
+
 '''
 from collections import defaultdict
 
