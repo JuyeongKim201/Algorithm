@@ -28,7 +28,7 @@ for i in range(N):
 
     # i번째 탑보다 높은 탑이 없었다면
     if flag:
-        res.append(0)
+        res.append(0) 
     
 
 print(" ".join(map(str, res)))
