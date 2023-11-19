@@ -59,7 +59,7 @@ while graph[tmp[0]][tmp[1]] != -1:
 
     # 방향 전환을 만났는가?
     if change_direction[cnt]:
-        flag = True
+        flag = True 
         rotate = change_direction[cnt] # 회전 방향 기록
     
     # 다음 step 밟기
