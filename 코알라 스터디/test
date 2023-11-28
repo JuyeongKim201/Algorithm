@@ -2,3 +2,31 @@ a = [1,2,3,4]
 b = 1
 del(a[b:b+2])
 print(a)
+
+
+import sys
+input = sys.stdin.readline
+from collections import deque
+
+n, w, L = map(int,input().split())
+trucks = deque(list(map(int,input().split())))
+bridge = deque(0 for i in range(w))
+print(f'bridge: {bridge}')
+
+cnt = 0
+weight = 0
+while bridge or trucks:
+    out = bridge.popleft()
+    weight -= out
+    if trucks: # 대기중인 트럭이 있다면
+        if L >= weight + trucks[0]:
+            truck = trucks.popleft()
+            bridge.append(truck)
+            weight += truck
+        else:
+            bridge.append(0)
+    
+    cnt += 1
+
+print(cnt)
+
