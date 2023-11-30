@@ -43,7 +43,7 @@ def n_queen(row):
 # 실행 부분
 N = int(input())
 rows = [0] * N
-count = 0
+count = 0 
 
 n_queen(0)
 print(count)
