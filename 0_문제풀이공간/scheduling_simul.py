@@ -8,5 +8,7 @@ for i in range(100):
     print(f'running: {running_recent_cpu}')
     print(f'ready: {ready_recent_cpu}')
     
-
-
+a = 1677216
+for i in range(20):
+    a = a/2
+    print(f'{i} 번째: {a}')
