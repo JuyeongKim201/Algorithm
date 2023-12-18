@@ -42,6 +42,6 @@ for i in range(1, N-1):
             print()
 
 # 마크하고 카운트 체크하는 함수
-def mark(line):
-    if line = 
+# def mark(line):
+    # if line = 
 
