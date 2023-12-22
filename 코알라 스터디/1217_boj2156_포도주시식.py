@@ -1,6 +1,6 @@
 # 문제: 포도주 시식 (실버 1)
 '''
-f(n) = max (f(n-3) + dp[n-1] + dp[n] , 
+f(n) = max (f(n-3) + dp[n-1] + dp[n], 
             f(n-2) + dp[n], 
             f(n-1))
 '''
@@ -19,6 +19,7 @@ if n == 1:
     print(result[2])
 else:
     for i in range(3, len(result)):
-        result[i] = max(result[i-3]+dp[i-1]+dp[i], result[i-2]+dp[i], result[i-1])
-    
+        result[i] = max(result[i-3]+dp[i-1]+dp[i],
+                        result[i-2]+dp[i], result[i-1])
+
     print(result[i])
