@@ -28,21 +28,21 @@
 
 
 // // 풀이 3
-// rl.on('line', function (line) {
-//     input = [line];
-// }).on('close',function(){
-//     str = input[0];
-//     [...str].map((i)=>console.log(i));
-// });
+rl.on('line', function (line) {
+    input = [line];
+}).on('close',function(){
+    str = input[0];
+    [...str].map((i)=>console.log(i));
+});
 
 
 // // 풀이 4
-// rl.on('line', function (line) {
-//     input = [line];
-// }).on('close',function(){
-//     str = input[0];
-//     [...str].forEach((i)=>console.log(i));
-// });
+rl.on('line', function (line) {
+    input = [line];
+}).on('close',function(){
+    str = input[0];
+    [...str].forEach((i)=>console.log(i));
+});
 
 
 function sum(x, y, z) {
