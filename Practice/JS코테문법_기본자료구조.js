@@ -17,14 +17,14 @@ for (let i in arr_loop) { // i에는 index가 저장됨
 
 let arr_map = [1,2,3,4];
 let arr_map_2 = arr_map.map(num => {
-    if (num <= 2){
+    if (num % 2 == 0){
         return 0;        
     } else {
         return 1;
     }
 })
 console.log(arr_map); // [1, 2, 3, 4]
-console.log(arr_map_2); // [0, 0, 1, 1]
+console.log(arr_map_2); // [1, 0, 1, 0]
 
 let arr_forEach = [1,2,3,4];
 arr_forEach.forEach(num => {
@@ -70,7 +70,7 @@ console.log(customer); // '홍길동'
 
 
 /*
-[맵]
+[해시맵]
 - 선언: let map = new Map();
 - 삽입: map.set();
 - 조회: map.get();
@@ -107,6 +107,16 @@ map.forEach(i =>
     console.log(i) // 30, 김덕배, korea
 )
 
+/*
+[Set (집합)]
+
+
+*/
+let setTest = new Set();
+console.log(setTest);
+
+
+
 // 기존 맵을 순회하며 각 요소를 변환하여 새로운 맵을 생성
 let newMap = new Map();
 map.forEach((value, key) => {
@@ -118,7 +128,8 @@ map.forEach((value, key) => {
 });
 
 // 변환된 맵 출력
-console.log(newMap);
+console.log(newMap); // Map(3) { 'age' => 40, 'name' => '김덕배', 'country' => 'korea' }
+console.log(newMap.get("age"));
 
 /*
 [스택, 큐]
@@ -129,10 +140,10 @@ console.log(newMap);
 let a = [1,2,3,4,5]
 
 a.push(6);
-console.log(a);
+console.log(a); // [1, 2, 3, 4, 5, 6]
 
 a.pop();
-console.log(a); 
+console.log(a); // [1, 2, 3, 4, 5]
 
 a.shift();
-console.log(a);
+console.log(a); // [2, 3, 4, 5]
